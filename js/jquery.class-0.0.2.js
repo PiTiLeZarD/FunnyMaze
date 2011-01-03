@@ -33,8 +33,8 @@
  * @description Class creation and management for use with jQuery
  * @link http://code.google.com/p/digg
  *
- * @requires Array.indexOf -- If you support older browsers, make sure you prototype this in
  */
+ 
 
 /**
  * @class Class A singleton that handles static and dynamic classes, as well as namespaces
@@ -92,7 +92,7 @@ Class = {
                     //loop through the object passed to namespace
                     for(var key in ns) {
                         //only operate on vanilla Objects and Functions
-                        if([Object, Function].indexOf(ns[key].constructor) > -1) {
+                        if($.inArray(ns[key].constructor, [Object, Function]) > -1) {
                             //in case this.ns has been deleted
                             if(!this.ns) this.ns = [];
                             
@@ -194,7 +194,7 @@ Class = {
                 for(i in this) {
                     /* if a property is a function (other than our built-in helpers) and it already exists
                     in the class, save it as a super. note that this only saves the last occurrence */
-                    if(extendee[i] && extendee[i].constructor == Function && ['namespace','create','sup'].indexOf(i) == -1) {
+                    if(extendee[i] && extendee[i].constructor == Function && $.inArray(i, ['namespace','create','sup']) == -1) {
                         //since Function.name is almost never set for us, do it manually
                         this[i].name = extendee[i].name = i;
                         

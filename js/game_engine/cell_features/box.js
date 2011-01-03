@@ -8,7 +8,7 @@ GameEngine.Classes.CellFeatureBox = Class.create(GameEngine.Classes.CellFeature.
         this.count = 8;
         this.dispatch_type = GameEngine.CONST.DISPATCH_PERCENT;
         
-        this.sup();
+        this.sup('init');
     },
 
     hit: function( cell, direction ) {

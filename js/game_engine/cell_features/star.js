@@ -9,7 +9,7 @@ GameEngine.Classes.CellFeatureStar = Class.create(GameEngine.Classes.CellFeature
         this.dispatch_type = GameEngine.CONST.DISPATCH_RANDOM;
         this.gathered = 0;
         
-        this.sup();
+        this.sup('init');
     },
 
     hit: function( cell, direction ) {

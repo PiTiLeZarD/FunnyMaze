@@ -3,7 +3,7 @@
 GameEngine.Classes.RecursiveBacktracker = Class.create(GameEngine.Classes.MazeGenerator.prototype, {
 
     init: function() {
-        this.sup();
+        this.sup('init');
     },
 
     build: function() {

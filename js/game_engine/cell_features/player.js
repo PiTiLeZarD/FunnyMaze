@@ -8,7 +8,7 @@ GameEngine.Classes.CellFeaturePlayer = Class.create(GameEngine.Classes.CellFeatu
        
        $('html').bind('GE.move', {'self': this}, this.move);
        
-       this.sup();
+       this.sup('init');
    },
    
    move: function(ev, direction) {

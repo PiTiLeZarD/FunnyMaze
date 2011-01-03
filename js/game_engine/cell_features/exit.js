@@ -6,7 +6,7 @@ GameEngine.Classes.CellFeatureExit = Class.create(GameEngine.Classes.CellFeature
         this.kind = GameEngine.CONST.CELL_WALL;
         this.count = 1;
 
-        this.sup();
+        this.sup('init');
     },
 
     hit: function( cell, direction ) {

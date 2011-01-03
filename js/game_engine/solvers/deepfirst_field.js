@@ -2,7 +2,7 @@
 GameEngine.Classes.DeepFirstSearchFieldSolver = Class.create(GameEngine.Classes.MazeSolver.prototype, {
 
     init: function() {
-        this.sup();
+        this.sup('init');
     },
 
     solve: function( cell_from, cell_to ) {
@@ -91,7 +91,7 @@ GameEngine.Classes.CellFeatureExitPath = Class.create(GameEngine.Classes.CellFea
         this.kind = GameEngine.CONST.CELL_FIELD;
         this.count = 0;
         
-        this.sup();
+        this.sup('init');
     },
     
     hit: function( cell, direction ) {

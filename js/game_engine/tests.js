@@ -200,11 +200,11 @@ test("Game Feature - Abstract", function () {
             var HIT_CELL = null;
             var FeatureNameTestClass = Class.create(GameEngine.Classes.CellFeature.prototype, {
                 init: function() {
-                    this.name = 'player';
+                    this.name = 'test';
                     this.kind = GameEngine.CONST.CELL_WALL;
                     this.count = 2;
 
-                    this.sup();
+                    this.sup('init');
                 },
                 hit: function( cell, direction ) {
                     HIT_CELL = cell;
@@ -213,11 +213,10 @@ test("Game Feature - Abstract", function () {
                 }
             });
             
-            equals( null, GameEngine.getCellFeatureByName('player'), 'No test feature for the moment');
+            equals( null, GameEngine.getCellFeatureByName('test'), 'No test feature for the moment');
             GameEngine.availableFeatures.push(new FeatureNameTestClass());
             equals( 1, GameEngine.availableFeatures.length );
-            var feature = GameEngine.getCellFeatureByName('player');
-            feature.name = 'test';
+            var feature = GameEngine.getCellFeatureByName('test');
             ok( feature != null , 'now we have one');
             equals( 'test', feature.name );
             ok( feature.img != null );
@@ -252,7 +251,7 @@ test("Game Feature - Abstract", function () {
             var FeatureNameTest2Class = Class.create(GameEngine.Classes.CellFeature.prototype, {
                 init: function() {
                     this.name = 'test2';
-                    this.sup();
+                    this.sup('init');
                 },
                 hit: function( cell, direction ) {
                     HIT_DIRECTION2 = direction;

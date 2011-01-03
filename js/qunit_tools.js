@@ -1,3 +1,11 @@
+if (typeof(console) == 'undefined') {
+    var console = {
+        log: function(message, title) {
+            alert(message);
+        }
+    };
+}
+
 /* put that in setup.js eventually */
 var loadFiles = function( files, cb ) {
     GameEngine.setup.finished = false;

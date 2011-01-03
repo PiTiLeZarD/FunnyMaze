@@ -1,0 +1,75 @@
+header, .box {
+    border:3px solid #395A99;
+    background-color:#728DCC;
+    color:#173877;
+    text-align:center;
+    width:auto;
+    margin:15px 30px;
+
+    border-radius:10px;
+    -moz-border-radius:10px;
+    
+    -webkit-box-shadow:10px 10px 5px #888;
+    -moz-box-shadow:10px 10px 5px #888;
+}
+
+header h1 {
+    font-family: 'Tangerine', arial, serif;
+    text-shadow:5px 5px 5px #555;
+    font-size:50px;
+}
+
+div.boxheader {
+    width:95%;
+    margin:3px auto 7px auto;
+    border-bottom:1px solid #395A99;
+    font-family: 'Reenie Beanie', arial, serif;
+    font-size:20px;
+}
+
+/* zone de jeu */
+article#game {
+    float:left;
+    width:60%;
+}
+    canvas#map {
+        width:500px;;
+        height:500px;
+        margin: 10px auto;
+    }
+
+/* zone de chat */
+
+aside#chat {
+    float:right;
+    width:28%;
+}
+    dl#chatzone {
+        padding:0 0 0 5px;
+        margin:0 0 10px 0;
+    }
+    dl#chatzone dt {
+        font-size:10px;
+        text-align:left;
+        margin-top:5px;
+    }
+    dl#chatzone dd {
+        text-align:left;
+        padding:5px;
+        margin-right:10px;
+        background:white;
+        border:1px solid #395A99;
+    
+        border-radius:10px;
+        -moz-border-radius:10px;
+    }
+    input#chatinput {
+        width:95%;
+        border:3px solid #395A99;
+        padding:3px;
+        color:#173877;
+        font-weight:bold;
+    
+        border-radius:10px;
+        -moz-border-radius:10px;
+    }

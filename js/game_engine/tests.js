@@ -14,7 +14,7 @@ test("Game Setup - basis", function () {
     ok( QUnit.is( 'function', GameEngine.setup.loadNextFile ), "... A function to load all files");
     equals( 0, GameEngine.setup.fileiterator, "We didn't loaded any file cuz it's test");
     equals( BASE_PATH, GameEngine.setup.basepath, "Correct basepath");
-    ok( !GameEngine.setup.finished, "not even started");
+    ok( !GameEngine.loaded, "not even started");
     ok( QUnit.is( 'function', GameEngine.ready ), "... A function 'à la' $(document).ready() but for the game");
     equals( 0, GameEngine.setup.readycallbacks.length, "No callbacks registered already");
     ok( QUnit.is( 'function', GameEngine.setup.finishedLoading ), "... A function to tell that the loading is finished");
@@ -24,14 +24,14 @@ test("Game Setup - basis", function () {
 test("Game Setup - finished loading and callbacks on ready", function () {
     
     GameEngine.setup.finishedLoading();
-    ok( GameEngine.setup.finished, "Should be finished");
+    ok( GameEngine.loaded, "Should be finished");
     
-    GameEngine.setup.finished = false;
+    GameEngine.loaded = false;
     var counter = 0;
     GameEngine.ready(function() { counter += 1; });
     equals( 1, GameEngine.setup.readycallbacks.length, "We registered our callback");
     GameEngine.setup.finishedLoading();
-    ok( GameEngine.setup.finished, "Should be finished");
+    ok( GameEngine.loaded, "Should be finished");
     equals( 1, counter, "Callback called");
     equals( 0, GameEngine.setup.readycallbacks.length, "Callback called so removed");
     

@@ -8,7 +8,7 @@ if (typeof(console) == 'undefined') {
 
 /* put that in setup.js eventually */
 var loadFiles = function( files, cb ) {
-    GameEngine.setup.finished = false;
+    GameEngine.loaded = false;
     GameEngine.setup.fileiterator = 0;
     GameEngine.setup.files = files;
     GameEngine.ready( cb );

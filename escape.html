@@ -7,6 +7,8 @@
         <script type="text/javascript" src="js/jquery-1.4.4.js"></script>
         <script type="text/javascript" src="js/jquery.class-0.0.2.js"></script>
 
+        <script type="text/javascript" src="js/game_engine/preset.js"></script>
+        <script type="text/javascript" src="js/games/escape.js"></script>
         <script type="text/javascript" src="js/game_engine/setup.js"></script>
 
 
@@ -24,23 +26,9 @@
             </article>
 
             <aside id="chat" class="box">
-            	<div class="boxheader">Historic</div>
+                <a href="#" onclick="GameEngine.findExit(); return false;">Find Exit !</a>
             </aside>
 
-            <script type="text/javascript">
-                GameEngine.ready( function() {
-                    GameEngine.init({
-                        'canvas_id': 'map',
-                        'width': 25,
-                        'height': 25,
-                        'features': {
-                            'player': {
-                                'count': 1
-                            }
-                        }
-                    });
-                });
-            </script>
 		</section>
 	</body>
 </html>
